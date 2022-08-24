@@ -1,0 +1,17 @@
+image:
+  file: .gitpod.Dockerfile
+
+# Learn more about this file at https://www.gitpod.io/docs/references/gitpod-yml
+tasks:
+  - command: |
+      cd MyNewApp
+      wasp start
+
+ports:
+  - port: 3000
+    description: Web app
+    onOpen: open-browser
+  - port: 3001
+    visibility: public
+    description: Node.js server
+    onOpen: ignore
